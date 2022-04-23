@@ -1,6 +1,6 @@
-package dao;
+package ru.kotikov.dao;
 
-import models.Customer;
+import ru.kotikov.output.attributes.result;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -27,14 +27,14 @@ public class CustomerDao {
         }
     }
 
-    public static List<Customer> getByLastName(String lastName) {
-        List<Customer> customers = new ArrayList<>();
+    public static List<result> getByLastName(String lastName) {
+        List<result> customers = new ArrayList<>();
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(
                     "SELECT * FROM customer AS c WHERE c.last_name = '" + lastName + "'");
             while (resultSet.next()) {
-                Customer resultCustomer = new Customer(resultSet.getString("first_name"),
+                result resultCustomer = new result(resultSet.getString("first_name"),
                         resultSet.getString("last_name"));
                 customers.add(resultCustomer);
             }
@@ -44,8 +44,8 @@ public class CustomerDao {
         return customers;
     }
 
-    public static List<Customer> getByProductNameAndMinTimes(String productName, int minTimes) {
-        List<Customer> customers = new ArrayList<>();
+    public static List<result> getByProductNameAndMinTimes(String productName, Long minTimes) {
+        List<result> customers = new ArrayList<>();
 
         try {
             Statement statement = connection.createStatement();
@@ -58,7 +58,7 @@ public class CustomerDao {
             );
             while (resultSet.next()) {
                 if (resultSet.getLong("count") >= minTimes) {
-                    Customer resultCustomer = new Customer(resultSet.getString("first_name"),
+                    result resultCustomer = new result(resultSet.getString("first_name"),
                             resultSet.getString("last_name"));
                     customers.add(resultCustomer);
                 }
@@ -69,8 +69,8 @@ public class CustomerDao {
         return customers;
     }
 
-    public static List<Customer> getByMinAndMaxExpenses(int minExpenses, int maxExpenses) {
-        List<Customer> customers = new ArrayList<>();
+    public static List<result> getByMinAndMaxExpenses(Long minExpenses, Long maxExpenses) {
+        List<result> customers = new ArrayList<>();
 
         try {
             Statement statement = connection.createStatement();
@@ -82,7 +82,7 @@ public class CustomerDao {
             );
             while (resultSet.next()) {
                 if ((resultSet.getLong("sum") >= minExpenses) && (resultSet.getLong("sum") <= maxExpenses)) {
-                    Customer resultCustomer = new Customer(resultSet.getString("first_name"),
+                    result resultCustomer = new result(resultSet.getString("first_name"),
                             resultSet.getString("last_name"));
                     customers.add(resultCustomer);
                 }
@@ -93,8 +93,8 @@ public class CustomerDao {
         return customers;
     }
 
-    public static List<Customer> getByBadCustomers(int badCustomers) {
-        List<Customer> customers = new ArrayList<>();
+    public static List<result> getByBadCustomers(Long badCustomers) {
+        List<result> customers = new ArrayList<>();
 
         try {
             Statement statement = connection.createStatement();
@@ -107,7 +107,7 @@ public class CustomerDao {
             );
             for (int i = 0; i < badCustomers; i++) {
                 resultSet.next();
-                Customer resultCustomer = new Customer(resultSet.getString("first_name"),
+                result resultCustomer = new result(resultSet.getString("first_name"),
                         resultSet.getString("last_name"));
                 customers.add(resultCustomer);
             }

@@ -1,9 +1,10 @@
-package output.attributes;
+package ru.kotikov.output.attributes;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
 @JsonInclude(Include.NON_NULL)
@@ -13,11 +14,11 @@ public class criteria {
     @JsonProperty(value = "productName")
     private String productName;
     @JsonProperty(value = "minTimes")
-    private Integer minTimes;
+    private Long minTimes;
     @JsonProperty(value = "minExpenses")
-    private Integer minExpenses;
+    private Long minExpenses;
     @JsonProperty(value = "maxExpenses")
-    private Integer maxExpenses;
+    private Long maxExpenses;
     @JsonProperty(value = "badCustomers")
-    private Integer badCustomers;
+    private Long badCustomers;
 }

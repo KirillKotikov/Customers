@@ -1,4 +1,4 @@
-package parser;
+package ru.kotikov.parser;
 
 import lombok.Getter;
 import lombok.ToString;

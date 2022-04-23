@@ -1,8 +1,8 @@
-package output.attributes;
+package ru.kotikov.output.attributes;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import models.Customer;
+import ru.kotikov.models.Customer;
 
 @Data
 @AllArgsConstructor

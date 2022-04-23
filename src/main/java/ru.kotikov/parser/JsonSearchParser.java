@@ -1,4 +1,4 @@
-package parser;
+package ru.kotikov.parser;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -14,8 +14,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonSearchParser implements Parser {
-    @Override
+public class JsonSearchParser {
     public SearchLists read(String fileName) {
         SearchLists searchLists = null;
         try {
@@ -54,7 +53,6 @@ public class JsonSearchParser implements Parser {
         return searchLists;
     }
 
-    @Override
     public void write(@NonNull String fileName, Object object) {
         // создаем объект с опциями красивой записи json файла
         ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
