@@ -16,9 +16,10 @@ import java.util.List;
 
 public class JsonSearchParser implements Parser {
     @Override
-    public SearchLists read(File file) {
+    public SearchLists read(String fileName) {
         SearchLists searchLists = null;
         try {
+            File file = new File(fileName);
             // Создаем объект JSONParser(
             Object obj = new JSONParser().parse(new FileReader(file));
             // Кастим obj в JSONObject
@@ -28,23 +29,23 @@ public class JsonSearchParser implements Parser {
             // цикл для чтения критериев
             List<String> lastNames = new ArrayList<>();
             List<String> productNames = new ArrayList<>();
-            List<Integer> minTimes = new ArrayList<>();
-            List<Integer> minExpenses = new ArrayList<>();
-            List<Integer> maxExpenses = new ArrayList<>();
-            List<Integer> badCustomers = new ArrayList<>();
+            List<Long> minTimes = new ArrayList<>();
+            List<Long> minExpenses = new ArrayList<>();
+            List<Long> maxExpenses = new ArrayList<>();
+            List<Long> badCustomers = new ArrayList<>();
             for (Object o : criterias) {
                 // кастим объект в json объект
                 JSONObject criteria = (JSONObject) o;
                 // получаем фамилию и сохраняем в список для поиска
-                lastNames.add(String.valueOf(criteria.get("lastName")));
+                if (criteria.get("lastName") != null) lastNames.add(String.valueOf(criteria.get("lastName")));
                 // получение имени продукта и минимального кол-ва покупов и добавляем для поиска
-                productNames.add(String.valueOf(criteria.get("productName")));
-                minTimes.add((Integer) criteria.get("minTimes"));
+                if (criteria.get("productName") != null) productNames.add(String.valueOf(criteria.get("productName")));
+                if (criteria.get("minTimes") != null)minTimes.add((Long) criteria.get("minTimes"));
                 // получение минимальной и максимальной суммы всех покупок для поиска
-                minExpenses.add((Integer) criteria.get("minExpenses"));
-                maxExpenses.add((Integer) criteria.get("maxExpenses"));
+                if (criteria.get("minExpenses") != null)minExpenses.add((Long) criteria.get("minExpenses"));
+                if (criteria.get("maxExpenses") != null)maxExpenses.add((Long) criteria.get("maxExpenses"));
                 // получение и поиск плохих покупателей
-                badCustomers.add((Integer) criteria.get("badCustomers"));
+                if (criteria.get("badCustomers") != null)badCustomers.add((Long) criteria.get("badCustomers"));
                 searchLists = new SearchLists(lastNames, productNames, minTimes, minExpenses, maxExpenses, badCustomers);
             }
         } catch (ParseException | IOException e) {
@@ -54,10 +55,11 @@ public class JsonSearchParser implements Parser {
     }
 
     @Override
-    public void write(@NonNull File file, Object object) {
+    public void write(@NonNull String fileName, Object object) {
         // создаем объект с опциями красивой записи json файла
         ObjectMapper mapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
         try {
+            File file = new File(fileName);
             // записываем объект в файл
             mapper.writeValue(file, object);
         } catch (

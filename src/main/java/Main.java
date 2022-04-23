@@ -1,10 +1,11 @@
-import dao.CustomerDao;
-import models.Customer;
+import parser.JsonSearchParser;
 
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Запустилось)\n");
+
+        System.out.println(new JsonSearchParser().read("InputTest.json"));
 
 //        if (args[0].equalsIgnoreCase("search")) {
 //         List<Customer> customerList = CustomerDao.getByLastName(args[1]);
@@ -21,10 +22,11 @@ public class Main {
 //            System.out.println(customer);
 //        }
 
-        for (Customer customer : CustomerDao.getByBadCustomers(6)) {
-            System.out.println(customer);
-        }
-        System.out.println("------OFF--------");
+//        for (Customer customer : CustomerDao.getByBadCustomers(6)) {
+//            System.out.println(customer);
+//        }
+
+        System.out.println("\n------OFF--------");
 
     }
 }

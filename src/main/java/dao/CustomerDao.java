@@ -33,7 +33,7 @@ public class CustomerDao {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(
                     "SELECT * FROM customer AS c WHERE c.last_name = '" + lastName + "'");
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 Customer resultCustomer = new Customer(resultSet.getString("first_name"),
                         resultSet.getString("last_name"));
                 customers.add(resultCustomer);
@@ -55,8 +55,8 @@ public class CustomerDao {
                     "JOIN product pr on pu.product_id = pr.id " +
                     "WHERE pr.product_name = '" + productName + "' " +
                     "GROUP BY c.last_name, c.first_name;"
-                    );
-            while(resultSet.next()) {
+            );
+            while (resultSet.next()) {
                 if (resultSet.getLong("count") >= minTimes) {
                     Customer resultCustomer = new Customer(resultSet.getString("first_name"),
                             resultSet.getString("last_name"));
@@ -80,7 +80,7 @@ public class CustomerDao {
                     "JOIN product pr on pu.product_id = pr.id " +
                     "GROUP BY c.last_name, c.first_name;"
             );
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 if ((resultSet.getLong("sum") >= minExpenses) && (resultSet.getLong("sum") <= maxExpenses)) {
                     Customer resultCustomer = new Customer(resultSet.getString("first_name"),
                             resultSet.getString("last_name"));
