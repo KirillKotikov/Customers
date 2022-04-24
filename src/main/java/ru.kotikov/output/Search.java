@@ -1,12 +1,13 @@
 package ru.kotikov.output;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
-import ru.kotikov.output.attributes.criteria;
-import ru.kotikov.output.attributes.result;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import ru.kotikov.output.searchAttributes.CriteriaAndResult;
 
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 @ToString
@@ -14,9 +15,9 @@ import java.util.List;
 public class Search {
     @Getter
     @JsonProperty("type")
-    private final String type = "search";
+    private final String TYPE = "search";
     @Getter
     @Setter
     @JsonProperty("results")
-    private List<LinkedHashMap<criteria, List<result>>> results = new ArrayList<>();
+    private List<CriteriaAndResult> results = new ArrayList<>();
 }

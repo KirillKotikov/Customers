@@ -1,6 +1,7 @@
 package ru.kotikov.dao;
 
-import ru.kotikov.output.attributes.result;
+import ru.kotikov.models.Customer;
+import ru.kotikov.output.searchAttributes.Results;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -27,14 +28,14 @@ public class CustomerDao {
         }
     }
 
-    public static List<result> getByLastName(String lastName) {
-        List<result> customers = new ArrayList<>();
+    public static List<Results> getByLastName(String lastName) {
+        List<Results> customers = new ArrayList<>();
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(
                     "SELECT * FROM customer AS c WHERE c.last_name = '" + lastName + "'");
             while (resultSet.next()) {
-                result resultCustomer = new result(resultSet.getString("first_name"),
+                Results resultCustomer = new Results(resultSet.getString("first_name"),
                         resultSet.getString("last_name"));
                 customers.add(resultCustomer);
             }
@@ -44,8 +45,8 @@ public class CustomerDao {
         return customers;
     }
 
-    public static List<result> getByProductNameAndMinTimes(String productName, Long minTimes) {
-        List<result> customers = new ArrayList<>();
+    public static List<Results> getByProductNameAndMinTimes(String productName, Double minTimes) {
+        List<Results> customers = new ArrayList<>();
 
         try {
             Statement statement = connection.createStatement();
@@ -58,7 +59,7 @@ public class CustomerDao {
             );
             while (resultSet.next()) {
                 if (resultSet.getLong("count") >= minTimes) {
-                    result resultCustomer = new result(resultSet.getString("first_name"),
+                    Results resultCustomer = new Results(resultSet.getString("first_name"),
                             resultSet.getString("last_name"));
                     customers.add(resultCustomer);
                 }
@@ -69,8 +70,8 @@ public class CustomerDao {
         return customers;
     }
 
-    public static List<result> getByMinAndMaxExpenses(Long minExpenses, Long maxExpenses) {
-        List<result> customers = new ArrayList<>();
+    public static List<Results> getByMinAndMaxExpenses(Double minExpenses, Double maxExpenses) {
+        List<Results> customers = new ArrayList<>();
 
         try {
             Statement statement = connection.createStatement();
@@ -82,7 +83,7 @@ public class CustomerDao {
             );
             while (resultSet.next()) {
                 if ((resultSet.getLong("sum") >= minExpenses) && (resultSet.getLong("sum") <= maxExpenses)) {
-                    result resultCustomer = new result(resultSet.getString("first_name"),
+                    Results resultCustomer = new Results(resultSet.getString("first_name"),
                             resultSet.getString("last_name"));
                     customers.add(resultCustomer);
                 }
@@ -93,8 +94,8 @@ public class CustomerDao {
         return customers;
     }
 
-    public static List<result> getByBadCustomers(Long badCustomers) {
-        List<result> customers = new ArrayList<>();
+    public static List<Results> getByBadCustomers(Double badCustomers) {
+        List<Results> customers = new ArrayList<>();
 
         try {
             Statement statement = connection.createStatement();
@@ -107,9 +108,33 @@ public class CustomerDao {
             );
             for (int i = 0; i < badCustomers; i++) {
                 resultSet.next();
-                result resultCustomer = new result(resultSet.getString("first_name"),
+                Results resultCustomer = new Results(resultSet.getString("first_name"),
                         resultSet.getString("last_name"));
                 customers.add(resultCustomer);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return customers;
+    }
+
+    public static List<Customer> getNamesByDates(String startDate, String endDate) {
+        List<Customer> customers = new ArrayList<>();
+
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT first_name, last_name FROM customer c " +
+                    "JOIN purchase p ON c.id = p.customer_id " +
+                    "WHERE p.purchases_date > (to_date('" + startDate + "','YYYY-MM-DD') - 1) " +
+                    "AND p.purchases_date < (to_date('" + endDate + "','YYYY-MM-DD') + 1) " +
+                    "GROUP BY c.last_name, c.first_name " +
+                    "ORDER BY c.last_name;"
+            );
+            while (resultSet.next()) {
+                Customer customer = new Customer(resultSet.getString("first_name"),
+                        resultSet.getString("last_name"));
+                customers.add(customer);
             }
         } catch (SQLException e) {
             e.printStackTrace();

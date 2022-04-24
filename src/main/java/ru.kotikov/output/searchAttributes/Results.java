@@ -1,4 +1,4 @@
-package ru.kotikov.output.attributes;
+package ru.kotikov.output.searchAttributes;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,12 +6,12 @@ import ru.kotikov.models.Customer;
 
 @Data
 @AllArgsConstructor
-public class result {
+public class Results {
     private String lastName;
     private String firstName;
 
-    public static result toResult(Customer customer) {
-        return new result(customer.getFirstName(),
+    public static Results toResult(Customer customer) {
+        return new Results(customer.getFirstName(),
                 customer.getLastName());
     }
 

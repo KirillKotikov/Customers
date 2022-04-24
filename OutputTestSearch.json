@@ -1,0 +1,96 @@
+{
+  "type" : "search",
+  "results" : [ {
+    "criteria(lastname=Иванов, productName=null, minTimes=null, minExpenses=null, maxExpenses=null, badCustomers=null)" : [ {
+      "lastName" : "Иван",
+      "firstName" : "Иванов"
+    } ]
+  }, {
+    "criteria(lastname=Петров, productName=null, minTimes=null, minExpenses=null, maxExpenses=null, badCustomers=null)" : [ {
+      "lastName" : "Андрей",
+      "firstName" : "Петров"
+    } ]
+  }, {
+    "criteria(lastname=Сберов, productName=null, minTimes=null, minExpenses=null, maxExpenses=null, badCustomers=null)" : [ {
+      "lastName" : "Салют",
+      "firstName" : "Сберов"
+    } ]
+  }, {
+    "criteria(lastname=null, productName=Минеральная вода, minTimes=5, minExpenses=null, maxExpenses=null, badCustomers=null)" : [ {
+      "lastName" : "Мелодия",
+      "firstName" : "Востова"
+    }, {
+      "lastName" : "Чичч",
+      "firstName" : "Чичч"
+    }, {
+      "lastName" : "Анатолий",
+      "firstName" : "Чуриков"
+    } ]
+  }, {
+    "criteria(lastname=null, productName=Чай черный, minTimes=2, minExpenses=null, maxExpenses=null, badCustomers=null)" : [ {
+      "lastName" : "Екатерина",
+      "firstName" : "Валидова"
+    }, {
+      "lastName" : "Стефания",
+      "firstName" : "Велкина"
+    }, {
+      "lastName" : "Мелодия",
+      "firstName" : "Востова"
+    }, {
+      "lastName" : "Сергей",
+      "firstName" : "Есенин"
+    }, {
+      "lastName" : "Иван",
+      "firstName" : "Иванов"
+    }, {
+      "lastName" : "Зима",
+      "firstName" : "Куликов"
+    }, {
+      "lastName" : "Мира",
+      "firstName" : "Мирова"
+    }, {
+      "lastName" : "Константин",
+      "firstName" : "Михеев"
+    }, {
+      "lastName" : "Алиса",
+      "firstName" : "Морошнина"
+    }, {
+      "lastName" : "Андрей",
+      "firstName" : "Петров"
+    }, {
+      "lastName" : "Михаил",
+      "firstName" : "Потапычев"
+    }, {
+      "lastName" : "Петр",
+      "firstName" : "Серов"
+    }, {
+      "lastName" : "Мария",
+      "firstName" : "Сурикова"
+    }, {
+      "lastName" : "Чичч",
+      "firstName" : "Чичч"
+    }, {
+      "lastName" : "Анатолий",
+      "firstName" : "Чуриков"
+    } ]
+  }, {
+    "criteria(lastname=null, productName=null, minTimes=null, minExpenses=5000, maxExpenses=6000, badCustomers=null)" : [ {
+      "lastName" : "Мира",
+      "firstName" : "Мирова"
+    } ]
+  }, {
+    "criteria(lastname=null, productName=null, minTimes=null, minExpenses=null, maxExpenses=null, badCustomers=4)" : [ {
+      "lastName" : "Мира",
+      "firstName" : "Мирова"
+    }, {
+      "lastName" : "Иван",
+      "firstName" : "Иванов"
+    }, {
+      "lastName" : "Константин",
+      "firstName" : "Михеев"
+    }, {
+      "lastName" : "Сергей",
+      "firstName" : "Есенин"
+    } ]
+  } ]
+}
