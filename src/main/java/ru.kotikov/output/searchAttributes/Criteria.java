@@ -15,14 +15,14 @@ public class Criteria {
     private String productName;
     @JsonInclude(Include.NON_NULL)
     @JsonProperty(value = "minTimes")
-    private Double minTimes;
+    private Long minTimes;
     @JsonInclude(Include.NON_NULL)
     @JsonProperty(value = "minExpenses")
-    private Double minExpenses;
+    private Long minExpenses;
     @JsonInclude(Include.NON_NULL)
     @JsonProperty(value = "maxExpenses")
-    private Double maxExpenses;
+    private Long maxExpenses;
     @JsonInclude(Include.NON_NULL)
     @JsonProperty(value = "badCustomers")
-    private Double badCustomers;
+    private Long badCustomers;
 }

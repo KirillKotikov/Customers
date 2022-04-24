@@ -29,7 +29,7 @@ public class SearchService {
         for (int i = 0; i < searchLists.getPRODUCT_NAMES().size(); i++) {
             Criteria cr = new Criteria();
             String productName = searchLists.getPRODUCT_NAMES().get(i);
-            Double minTimes = searchLists.getMIN_TIMES().get(i);
+            Long minTimes = searchLists.getMIN_TIMES().get(i);
             cr.setProductName(productName);
             cr.setMinTimes(minTimes);
             CriteriaAndResult criteriaAndResult = new CriteriaAndResult();
@@ -48,8 +48,8 @@ public class SearchService {
     public static void getByMinAndMaxExpenses(SearchLists searchLists, Search resultSearch) {
         for (int i = 0; i < searchLists.getMIN_EXPENSES().size(); i++) {
             Criteria cr = new Criteria();
-            Double minExpenses = searchLists.getMIN_EXPENSES().get(i);
-            Double maxExpenses = searchLists.getMAX_EXPENSES().get(i);
+            Long minExpenses = searchLists.getMIN_EXPENSES().get(i);
+            Long maxExpenses = searchLists.getMAX_EXPENSES().get(i);
             cr.setMinExpenses(minExpenses);
             cr.setMaxExpenses(maxExpenses);
             CriteriaAndResult criteriaAndResult = new CriteriaAndResult();
@@ -67,7 +67,7 @@ public class SearchService {
     }
 
     public static void getByBadCustomers(SearchLists searchLists, Search resultSearch) {
-        for (Double l : searchLists.getBAD_CUSTOMERS()) {
+        for (Long l : searchLists.getBAD_CUSTOMERS()) {
             Criteria cr = new Criteria();
             cr.setBadCustomers(l);
             CriteriaAndResult criteriaAndResult = new CriteriaAndResult();

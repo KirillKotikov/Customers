@@ -11,13 +11,13 @@ public class SearchLists {
 
     private final List<String> LAST_NAMES;
     private final List<String> PRODUCT_NAMES;
-    private final List<Double> MIN_TIMES;
-    private final List<Double> MIN_EXPENSES;
-    private final List<Double> MAX_EXPENSES;
-    private final List<Double> BAD_CUSTOMERS;
+    private final List<Long> MIN_TIMES;
+    private final List<Long> MIN_EXPENSES;
+    private final List<Long> MAX_EXPENSES;
+    private final List<Long> BAD_CUSTOMERS;
 
-    public SearchLists(List<String> lastNames, List<String> productNames, List<Double> minTimes,
-                       List<Double> minExpenses, List<Double> maxExpenses, List<Double> badCustomers) {
+    public SearchLists(List<String> lastNames, List<String> productNames, List<Long> minTimes,
+                       List<Long> minExpenses, List<Long> maxExpenses, List<Long> badCustomers) {
         this.LAST_NAMES = lastNames;
         this.PRODUCT_NAMES = productNames;
         this.MIN_TIMES = minTimes;

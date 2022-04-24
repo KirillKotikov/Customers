@@ -7,6 +7,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import ru.kotikov.output.Error;
 
 import java.io.File;
 import java.io.FileReader;
@@ -15,10 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JsonSearchParser {
-    public static SearchLists read(String fileName) {
+    public static SearchLists read(String inputFileName, String outputFileName) {
         SearchLists searchLists = null;
         try {
-            File file = new File(fileName);
+            File file = new File(inputFileName);
             // Создаем объект JSONParser(
             Object obj = new JSONParser().parse(new FileReader(file));
             // Кастим obj в JSONObject
@@ -28,10 +29,10 @@ public class JsonSearchParser {
             // цикл для чтения критериев
             List<String> lastNames = new ArrayList<>();
             List<String> productNames = new ArrayList<>();
-            List<Double> minTimes = new ArrayList<>();
-            List<Double> minExpenses = new ArrayList<>();
-            List<Double> maxExpenses = new ArrayList<>();
-            List<Double> badCustomers = new ArrayList<>();
+            List<Long> minTimes = new ArrayList<>();
+            List<Long> minExpenses = new ArrayList<>();
+            List<Long> maxExpenses = new ArrayList<>();
+            List<Long> badCustomers = new ArrayList<>();
             for (Object o : criterias) {
                 // кастим объект в json объект
                 JSONObject criteria = (JSONObject) o;
@@ -39,12 +40,44 @@ public class JsonSearchParser {
                 if (criteria.get("lastName") != null) lastNames.add(String.valueOf(criteria.get("lastName")));
                 // получение имени продукта и минимального кол-ва покупов и добавляем для поиска
                 if (criteria.get("productName") != null) productNames.add(String.valueOf(criteria.get("productName")));
-                if (criteria.get("minTimes") != null)minTimes.add((Double) criteria.get("minTimes"));
+                if (criteria.get("minTimes") != null) {
+                    if (!String.valueOf(criteria.get("minTimes")).matches("\\d+")){
+                        Error error = new Error("В поле minTimes должны быть введены только цифры");
+                        write(outputFileName, error);
+                        System.out.println("Ошибка! Информация в файле с именем - " + outputFileName);
+                        System.exit(0);
+                    }
+                    minTimes.add((Long) criteria.get("minTimes"));
+                }
                 // получение минимальной и максимальной суммы всех покупок для поиска
-                if (criteria.get("minExpenses") != null)minExpenses.add((Double) criteria.get("minExpenses"));
-                if (criteria.get("maxExpenses") != null)maxExpenses.add((Double) criteria.get("maxExpenses"));
+                if (criteria.get("minExpenses") != null){
+                    if (!String.valueOf(criteria.get("minExpenses")).matches("\\d+")){
+                        Error error = new Error("В поле minExpenses должны быть введены только цифры");
+                        write(outputFileName, error);
+                        System.out.println("Ошибка! Информация в файле с именем - " + outputFileName);
+                        System.exit(0);
+                    }
+                    minExpenses.add((Long) criteria.get("minExpenses"));
+                }
+                if (criteria.get("maxExpenses") != null){
+                    if (!String.valueOf(criteria.get("maxExpenses")).matches("\\d+")){
+                        Error error = new Error("В поле maxExpenses должны быть введены только цифры");
+                        write(outputFileName, error);
+                        System.out.println("Ошибка! Информация в файле с именем - " + outputFileName);
+                        System.exit(0);
+                    }
+                    maxExpenses.add((Long) criteria.get("maxExpenses"));
+                }
                 // получение и поиск плохих покупателей
-                if (criteria.get("badCustomers") != null)badCustomers.add((Double) criteria.get("badCustomers"));
+                if (criteria.get("badCustomers") != null){
+                    if (!String.valueOf(criteria.get("badCustomers")).matches("\\d+")){
+                        Error error = new Error("В поле badCustomers должны быть введены только цифры");
+                        write(outputFileName, error);
+                        System.out.println("Ошибка! Информация в файле с именем - " + outputFileName);
+                        System.exit(0);
+                    }
+                    badCustomers.add((Long) criteria.get("badCustomers"));
+                }
                 searchLists = new SearchLists(lastNames, productNames, minTimes, minExpenses, maxExpenses, badCustomers);
             }
         } catch (ParseException | IOException e) {

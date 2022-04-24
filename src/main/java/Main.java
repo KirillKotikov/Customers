@@ -18,7 +18,7 @@ public class Main {
         if (args[0].equalsIgnoreCase("search")) {
             if (args.length > 1) {
                 if (args.length > 2) {
-                    SearchLists searchLists = JsonSearchParser.read(args[1]);
+                    SearchLists searchLists = JsonSearchParser.read(args[1], args[2]);
                     Search resultSearch = new Search();
 
                     SearchService.getByLastName(searchLists, resultSearch);
@@ -41,8 +41,8 @@ public class Main {
             }
         } else if (args[0].equalsIgnoreCase("stat")) {
 
-            StatDates statDates = JsonStatParser.read(args[1]);
-            Stat stat = StatService.getStats(statDates.getStarDate(), statDates.getEndDate());
+            StatDates statDates = JsonStatParser.read(args[1], args[2]);
+            Stat stat = StatService.getStats(statDates.getStartDate(), statDates.getEndDate());
             JsonStatParser.write(args[2], stat);
             System.out.println("Операция прошла успешно!\nРезультат в файле с именем - " + args[2]);
         } else {

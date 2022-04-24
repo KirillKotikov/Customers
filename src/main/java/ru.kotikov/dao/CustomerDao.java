@@ -45,7 +45,7 @@ public class CustomerDao {
         return customers;
     }
 
-    public static List<Results> getByProductNameAndMinTimes(String productName, Double minTimes) {
+    public static List<Results> getByProductNameAndMinTimes(String productName, Long minTimes) {
         List<Results> customers = new ArrayList<>();
 
         try {
@@ -70,7 +70,7 @@ public class CustomerDao {
         return customers;
     }
 
-    public static List<Results> getByMinAndMaxExpenses(Double minExpenses, Double maxExpenses) {
+    public static List<Results> getByMinAndMaxExpenses(Long minExpenses, Long maxExpenses) {
         List<Results> customers = new ArrayList<>();
 
         try {
@@ -94,7 +94,7 @@ public class CustomerDao {
         return customers;
     }
 
-    public static List<Results> getByBadCustomers(Double badCustomers) {
+    public static List<Results> getByBadCustomers(Long badCustomers) {
         List<Results> customers = new ArrayList<>();
 
         try {
