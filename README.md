@@ -17,7 +17,7 @@
 1) Для запуска проекта необходимо скачать в одну папку следующие файлы
 из корня проекта: Customers-1.0-SNAPSHOT.jar, jackson-annotations-2.9.0.jar, 
 jackson-core-2.9.5.jar, jackson-databind-2.9.5.jar, json-simple-1.1.jar, postgresql-42.3.4.jar. <br/>
-2) Для работы PostgreSQL вам необходимо создать базу данных со следующим адресом - jdbc:postgresql://localhost:5432/customers.
+2) Для работы PostgreSQL вам необходимо создать базу данных со следующим адресом - jdbc:postgresql://localhost:5432/customers.<br/>
 3) В корне проекта есть DDL (DDL_script.sql) и DML (DML_script.sql) скрипты для создания таблиц и внесения в них данных, которые нужно скопировать 
 в консоль запросов к базе данных и запустить.
 4) Запуск приложения производится из консоли. Входные параметры: 
