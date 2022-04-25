@@ -1,0 +1,516 @@
+{
+  "type" : "stat",
+  "totalDays" : 5,
+  "customers" : [ {
+    "name" : "Валидова Екатерина",
+    "purchases" : [ {
+      "name" : "Сыр",
+      "expenses" : 499.99
+    }, {
+      "name" : "Мясо",
+      "expenses" : 359.99
+    }, {
+      "name" : "Чай черный",
+      "expenses" : 219.98
+    }, {
+      "name" : "Чай зеленый",
+      "expenses" : 123.99
+    }, {
+      "name" : "Бананы",
+      "expenses" : 104.99
+    }, {
+      "name" : "Кефир",
+      "expenses" : 89.99
+    } ],
+    "totalExpenses" : "1398,93"
+  }, {
+    "name" : "Велкина Стефания",
+    "purchases" : [ {
+      "name" : "Мясо",
+      "expenses" : 359.99
+    }, {
+      "name" : "Чай зеленый",
+      "expenses" : 123.99
+    }, {
+      "name" : "Молоко",
+      "expenses" : 109.99
+    }, {
+      "name" : "Яйца",
+      "expenses" : 99.99
+    }, {
+      "name" : "Петрушка",
+      "expenses" : 49.99
+    }, {
+      "name" : "Печенье",
+      "expenses" : 36.99
+    } ],
+    "totalExpenses" : "780,94"
+  }, {
+    "name" : "Востова Мелодия",
+    "purchases" : [ {
+      "name" : "Кофе",
+      "expenses" : 999.98
+    }, {
+      "name" : "Сыр",
+      "expenses" : 499.99
+    }, {
+      "name" : "Сгущенное молоко",
+      "expenses" : 239.99
+    }, {
+      "name" : "Чай черный",
+      "expenses" : 219.98
+    }, {
+      "name" : "Яблоки",
+      "expenses" : 149.99
+    }, {
+      "name" : "Сливочное масло",
+      "expenses" : 139.99
+    }, {
+      "name" : "Чай зеленый",
+      "expenses" : 123.99
+    }, {
+      "name" : "Хлеб белый",
+      "expenses" : 93.98
+    }, {
+      "name" : "Печенье",
+      "expenses" : 73.98
+    }, {
+      "name" : "Пончик",
+      "expenses" : 49.99
+    }, {
+      "name" : "Минеральная вода",
+      "expenses" : 26.49
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "2638,34"
+  }, {
+    "name" : "Есенин Сергей",
+    "purchases" : [ {
+      "name" : "Сыр",
+      "expenses" : 1499.97
+    }, {
+      "name" : "Кофе",
+      "expenses" : 999.98
+    }, {
+      "name" : "Сливочное масло",
+      "expenses" : 279.98
+    }, {
+      "name" : "Сгущенное молоко",
+      "expenses" : 239.99
+    }, {
+      "name" : "Яблоки",
+      "expenses" : 149.99
+    }, {
+      "name" : "Минеральная вода",
+      "expenses" : 26.49
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "3216,39"
+  }, {
+    "name" : "Иванов Иван",
+    "purchases" : [ {
+      "name" : "Яблоки",
+      "expenses" : 149.99
+    }, {
+      "name" : "Чай зеленый",
+      "expenses" : 123.99
+    }, {
+      "name" : "Чай черный",
+      "expenses" : 109.99
+    }, {
+      "name" : "Яйца",
+      "expenses" : 99.99
+    }, {
+      "name" : "Кефир",
+      "expenses" : 89.99
+    }, {
+      "name" : "Пончик",
+      "expenses" : 49.99
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "643,93"
+  }, {
+    "name" : "Куликов Зима",
+    "purchases" : [ {
+      "name" : "Чай черный",
+      "expenses" : 329.97
+    }, {
+      "name" : "Сливочное масло",
+      "expenses" : 139.99
+    }, {
+      "name" : "Печенье",
+      "expenses" : 110.97
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 79.96
+    }, {
+      "name" : "Пончик",
+      "expenses" : 49.99
+    }, {
+      "name" : "Хлеб белый",
+      "expenses" : 46.99
+    }, {
+      "name" : "Минеральная вода",
+      "expenses" : 26.49
+    } ],
+    "totalExpenses" : "784,36"
+  }, {
+    "name" : "Маринин Василий",
+    "purchases" : [ {
+      "name" : "Кофе",
+      "expenses" : 499.99
+    }, {
+      "name" : "Сыр",
+      "expenses" : 499.99
+    }, {
+      "name" : "Растительное масло",
+      "expenses" : 219.98
+    }, {
+      "name" : "Яйца",
+      "expenses" : 199.98
+    }, {
+      "name" : "Чай зеленый",
+      "expenses" : 123.99
+    }, {
+      "name" : "Бананы",
+      "expenses" : 104.99
+    }, {
+      "name" : "Пончик",
+      "expenses" : 99.98
+    }, {
+      "name" : "Хлеб белый",
+      "expenses" : 46.99
+    }, {
+      "name" : "Печенье",
+      "expenses" : 36.99
+    } ],
+    "totalExpenses" : "1832,88"
+  }, {
+    "name" : "Милова Дарья",
+    "purchases" : [ {
+      "name" : "Мясо",
+      "expenses" : 359.99
+    }, {
+      "name" : "Растительное масло",
+      "expenses" : 109.99
+    }, {
+      "name" : "Кефир",
+      "expenses" : 89.99
+    }, {
+      "name" : "Пончик",
+      "expenses" : 49.99
+    }, {
+      "name" : "Печенье",
+      "expenses" : 36.99
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "666,94"
+  }, {
+    "name" : "Мирова Мира",
+    "purchases" : [ {
+      "name" : "Сгущенное молоко",
+      "expenses" : 239.99
+    }, {
+      "name" : "Сливочное масло",
+      "expenses" : 139.99
+    }, {
+      "name" : "Чай черный",
+      "expenses" : 109.99
+    }, {
+      "name" : "Яйца",
+      "expenses" : 99.99
+    }, {
+      "name" : "Кефир",
+      "expenses" : 89.99
+    }, {
+      "name" : "Петрушка",
+      "expenses" : 49.99
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 39.98
+    } ],
+    "totalExpenses" : "769,92"
+  }, {
+    "name" : "Михеев Константин",
+    "purchases" : [ {
+      "name" : "Сыр",
+      "expenses" : 499.99
+    }, {
+      "name" : "Пончик",
+      "expenses" : 149.97
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 39.98
+    } ],
+    "totalExpenses" : "689,94"
+  }, {
+    "name" : "Морошнина Алиса",
+    "purchases" : [ {
+      "name" : "Сыр",
+      "expenses" : 499.99
+    }, {
+      "name" : "Сливочное масло",
+      "expenses" : 139.99
+    }, {
+      "name" : "Растительное масло",
+      "expenses" : 109.99
+    }, {
+      "name" : "Бананы",
+      "expenses" : 104.99
+    }, {
+      "name" : "Яйца",
+      "expenses" : 99.99
+    }, {
+      "name" : "Хлеб белый",
+      "expenses" : 46.99
+    }, {
+      "name" : "Злеб Дарницкий",
+      "expenses" : 39.99
+    }, {
+      "name" : "Печенье",
+      "expenses" : 36.99
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "1098,91"
+  }, {
+    "name" : "Оловьева Карина",
+    "purchases" : [ {
+      "name" : "Сыр",
+      "expenses" : 999.98
+    }, {
+      "name" : "Растительное масло",
+      "expenses" : 219.98
+    }, {
+      "name" : "Молоко",
+      "expenses" : 109.99
+    }, {
+      "name" : "Кефир",
+      "expenses" : 89.99
+    }, {
+      "name" : "Пончик",
+      "expenses" : 49.99
+    }, {
+      "name" : "Печенье",
+      "expenses" : 36.99
+    }, {
+      "name" : "Минеральная вода",
+      "expenses" : 26.49
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "1553,40"
+  }, {
+    "name" : "Петров Андрей",
+    "purchases" : [ {
+      "name" : "Кофе",
+      "expenses" : 499.99
+    }, {
+      "name" : "Сгущенное молоко",
+      "expenses" : 239.99
+    }, {
+      "name" : "Яблоки",
+      "expenses" : 149.99
+    }, {
+      "name" : "Сливочное масло",
+      "expenses" : 139.99
+    }, {
+      "name" : "Молоко",
+      "expenses" : 109.99
+    }, {
+      "name" : "Хлеб белый",
+      "expenses" : 46.99
+    }, {
+      "name" : "Печенье",
+      "expenses" : 36.99
+    } ],
+    "totalExpenses" : "1223,93"
+  }, {
+    "name" : "Потапычев Михаил",
+    "purchases" : [ {
+      "name" : "Мясо",
+      "expenses" : 719.98
+    }, {
+      "name" : "Чай зеленый",
+      "expenses" : 371.97
+    }, {
+      "name" : "Яблоки",
+      "expenses" : 149.99
+    }, {
+      "name" : "Сливочное масло",
+      "expenses" : 139.99
+    }, {
+      "name" : "Петрушка",
+      "expenses" : 49.99
+    }, {
+      "name" : "Печенье",
+      "expenses" : 36.99
+    }, {
+      "name" : "Минеральная вода",
+      "expenses" : 26.49
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "1515,39"
+  }, {
+    "name" : "Рюмин Николай",
+    "purchases" : [ {
+      "name" : "Кофе",
+      "expenses" : 499.99
+    }, {
+      "name" : "Растительное масло",
+      "expenses" : 219.98
+    }, {
+      "name" : "Сливочное масло",
+      "expenses" : 139.99
+    }, {
+      "name" : "Кефир",
+      "expenses" : 89.99
+    }, {
+      "name" : "Хлеб белый",
+      "expenses" : 46.99
+    }, {
+      "name" : "Злеб Дарницкий",
+      "expenses" : 39.99
+    } ],
+    "totalExpenses" : "1036,93"
+  }, {
+    "name" : "Сберов Салют",
+    "purchases" : [ {
+      "name" : "Кофе",
+      "expenses" : 499.99
+    }, {
+      "name" : "Молоко",
+      "expenses" : 219.98
+    }, {
+      "name" : "Яблоки",
+      "expenses" : 149.99
+    }, {
+      "name" : "Чай зеленый",
+      "expenses" : 123.99
+    }, {
+      "name" : "Бананы",
+      "expenses" : 104.99
+    }, {
+      "name" : "Яйца",
+      "expenses" : 99.99
+    }, {
+      "name" : "Пончик",
+      "expenses" : 49.99
+    }, {
+      "name" : "Злеб Дарницкий",
+      "expenses" : 39.99
+    }, {
+      "name" : "Минеральная вода",
+      "expenses" : 26.49
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "1335,39"
+  }, {
+    "name" : "Серов Петр",
+    "purchases" : [ {
+      "name" : "Сгущенное молоко",
+      "expenses" : 479.98
+    }, {
+      "name" : "Мясо",
+      "expenses" : 359.99
+    }, {
+      "name" : "Чай черный",
+      "expenses" : 219.98
+    }, {
+      "name" : "Петрушка",
+      "expenses" : 49.99
+    }, {
+      "name" : "Злеб Дарницкий",
+      "expenses" : 39.99
+    } ],
+    "totalExpenses" : "1149,93"
+  }, {
+    "name" : "Сурикова Мария",
+    "purchases" : [ {
+      "name" : "Сыр",
+      "expenses" : 499.99
+    }, {
+      "name" : "Кофе",
+      "expenses" : 499.99
+    }, {
+      "name" : "Сгущенное молоко",
+      "expenses" : 239.99
+    }, {
+      "name" : "Чай черный",
+      "expenses" : 219.98
+    }, {
+      "name" : "Бананы",
+      "expenses" : 209.98
+    }, {
+      "name" : "Хлеб белый",
+      "expenses" : 46.99
+    }, {
+      "name" : "Минеральная вода",
+      "expenses" : 26.49
+    } ],
+    "totalExpenses" : "1743,41"
+  }, {
+    "name" : "Чичч Чичч",
+    "purchases" : [ {
+      "name" : "Сыр",
+      "expenses" : 499.99
+    }, {
+      "name" : "Кофе",
+      "expenses" : 499.99
+    }, {
+      "name" : "Растительное масло",
+      "expenses" : 219.98
+    }, {
+      "name" : "Яблоки",
+      "expenses" : 149.99
+    }, {
+      "name" : "Чай черный",
+      "expenses" : 109.99
+    }, {
+      "name" : "Хлеб белый",
+      "expenses" : 46.99
+    }, {
+      "name" : "Злеб Дарницкий",
+      "expenses" : 39.99
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "1586,91"
+  }, {
+    "name" : "Чуриков Анатолий",
+    "purchases" : [ {
+      "name" : "Сгущенное молоко",
+      "expenses" : 239.99
+    }, {
+      "name" : "Бананы",
+      "expenses" : 209.98
+    }, {
+      "name" : "Растительное масло",
+      "expenses" : 109.99
+    }, {
+      "name" : "Злеб Дарницкий",
+      "expenses" : 39.99
+    }, {
+      "name" : "Вода негазированная",
+      "expenses" : 19.99
+    } ],
+    "totalExpenses" : "619,94"
+  } ],
+  "totalExpenses" : "26286,71",
+  "avgExpenses" : "1314,34"
+}

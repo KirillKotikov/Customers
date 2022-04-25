@@ -4,8 +4,11 @@
     {"lastName": "Петров"},
     {"lastName": "Сберов"},
     {"productName": "Минеральная вода", "minTimes": 5},
+    {"productName": "Бананы", "minTimes": 3},
     {"productName": "Чай черный", "minTimes": 2},
     {"minExpenses": 5000, "maxExpenses": 6000},
-    {"badCustomers": 4}
+    {"minExpenses": 6000, "maxExpenses": 7000},
+    {"badCustomers": 4},
+    {"badCustomers": 7}
   ]
 }

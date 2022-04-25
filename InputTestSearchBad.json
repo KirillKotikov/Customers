@@ -1,0 +1,9 @@
+{
+  "criterias": [
+    {"lastName": "Иванов"},
+    {"productName": "Минеральная вода", "minTimes": "dsfs"},
+    {"productName": "Чай черный", "minTimes": 2},
+    {"minExpenses": 6000, "maxExpenses": 7000},
+    {"badCustomers": 7}
+  ]
+}
